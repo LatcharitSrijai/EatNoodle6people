@@ -8,24 +8,75 @@
 <body>
 <p>Welcome to our BasicDevOps project website</p>
 <body>
-  <h1 class="title">My Art Gallery</h1>
+  <body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Latcharit Art</div>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#commission">Commission</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-  <div class="gallery">
-  <img src="image/DekWinnie.png">
-  <img src="image/HBD KhunMo.png">
-  <img src="image/Khun Sori Full Body.png">
-  <img src="image/KhunJ Closeup.png">
-  <img src="image/KhunMo 1000 follow.png">
-  <img src="image/Pjinnie_Songtest.png">
-  <img src="image/PKit.png">
-  <img src="image/Valentine Cownele Ori.png">
-  <img src="image/Yukata khunmi.png">
-</div>
+    <div class="hero-content">
+      <p class="subtitle">Anime / Pixel Style Illustration</p>
+      <h1>Commission & Portfolio Gallery</h1>
+      <p class="hero-text">
+        Welcome to my art portfolio. I create character illustrations, portraits,
+        and stylized commission works with a soft anime-inspired aesthetic.
+      </p>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn primary">View Gallery</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+  </header>
 
-  <div id="modal" class="modal">
-    <span id="close">&times;</span>
-    <img id="modal-img">
-  </div>
+  <section class="section" id="gallery">
+    <h2>Featured Works</h2>
+    <p class="section-desc">A selection of my recent illustrations and personal artworks.</p>
+    <div class="gallery">
+      <img src="image/DekWinnie.png" alt="Artwork 1">
+      <img src="image/HBD KhunMo.png" alt="Artwork 2">
+      <img src="image/Khun Sori Full Body.png" alt="Artwork 3">
+      <img src="image/KhunJ Closeup.png" alt="Artwork 4">
+      <img src="image/KhunMo 1000 follow.png" alt="Artwork 5">
+      <img src="image/Pjinnie_Songtest.png" alt="Artwork 6">
+      <img src="image/PKit.png" alt="Artwork 7">
+      <img src="image/Valentine Cownele Ori.png" alt="Artwork 8">
+      <img src="image/Yukata khunmi.png" alt="Artwork 9">
+    </div>
+  </section>
+
+  <section class="section info-section" id="commission">
+    <h2>Commission Info</h2>
+    <div class="commission-grid">
+      <div class="info-card">
+        <h3>Bust Up</h3>
+        <p>Clean portrait-style illustration focusing on expression and color mood.</p>
+      </div>
+      <div class="info-card">
+        <h3>Half Body</h3>
+        <p>Balanced composition for character design, profile art, and social banners.</p>
+      </div>
+      <div class="info-card">
+        <h3>Full Body</h3>
+        <p>Ideal for original characters, outfit showcases, and stylized poses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <h2>Contact</h2>
+    <p>If you are interested in commissions, feel free to contact me through your preferred channel.</p>
+    <div class="contact-box">
+      <p>Email: yourmail@example.com</p>
+      <p>Facebook: yourpage</p>
+      <p>Discord: yourdiscord</p>
+    </div>
+  </section>
+</body>
 
   <script src="script.js"></script>
 </body>
