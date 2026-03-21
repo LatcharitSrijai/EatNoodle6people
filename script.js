@@ -1,38 +1,28 @@
-const images = [
-  "image/DekWinnie.png",
-  "image/HBD KhunMo.png",
-  "image/Khun Sori Full Body.png",
-  "image/KhunL Closeup.png",
-  "image/KhunMo 1000 follow.png",
-  "image/Pjinnie_Songtest.png",
-  "image/PKt.png",
-  "image/Valentine Cownele Ori.png",
-  "image/Yukata khunmi.png"
-];
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxClose = document.getElementById("lightbox-close");
 
-const gallery = document.getElementById("gallery");
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const closeBtn = document.getElementById("close");
-
-// render รูป
-images.forEach(src => {
-  const img = document.createElement("img");
-  img.src = src;
-
-  img.onclick = () => {
-    modal.style.display = "block";
-    modalImg.src = src;
-  };
-
-  gallery.appendChild(img);
+galleryImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("active");
+  });
 });
 
-// ปิด modal
-closeBtn.onclick = () => {
-  modal.style.display = "none";
-};
+lightboxClose.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
 
-modal.onclick = () => {
-  modal.style.display = "none";
-};
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("active");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.classList.remove("active");
+  }
+});
