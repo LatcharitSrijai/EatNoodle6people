@@ -11,15 +11,19 @@ galleryImages.forEach((img) => {
   });
 });
 
-lightboxClose.addEventListener("click", () => {
-  lightbox.classList.remove("active");
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
+if (lightboxClose) {
+  lightboxClose.addEventListener("click", () => {
     lightbox.classList.remove("active");
-  }
-});
+  });
+}
+
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+}
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
