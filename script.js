@@ -1,27 +1,38 @@
-let tasks = []
+const images = [
+  "image/DekWinnie.png",
+  "image/HBD KhunMo.png",
+  "image/Khun Sori Full Body.png",
+  "image/KhunL Closeup.png",
+  "image/KhunMo 1000 follow.png",
+  "image/Pjinnie_Songtest.png",
+  "image/PKt.png",
+  "image/Valentine Cownele Ori.png",
+  "image/Yukata khunmi.png"
+];
 
-function addTask(){
+const gallery = document.getElementById("gallery");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementById("close");
 
-    let task = "Task " + (tasks.length + 1)
+// render รูป
+images.forEach(src => {
+  const img = document.createElement("img");
+  img.src = src;
 
-    tasks.push(task)
+  img.onclick = () => {
+    modal.style.display = "block";
+    modalImg.src = src;
+  };
 
-    render()
-}
+  gallery.appendChild(img);
+});
 
-function render(){
+// ปิด modal
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
 
-    let container = document.getElementById("task-container")
-
-    container.innerHTML = ""
-
-    tasks.forEach(t => {
-
-        let div = document.createElement("div")
-
-        div.innerText = t
-
-        container.appendChild(div)
-
-    })
-}
+modal.onclick = () => {
+  modal.style.display = "none";
+};
