@@ -7,7 +7,7 @@ eatnoodle6people
 - 652115042 Latcharit Srijai
 
 ## Deployment URL
-https://13.220.189.219:8080
+[https://13.220.189.219:8080](http://13.220.189.219:8080/)
 
 ## Forked Repository URL
 (https://github.com/LatcharitSrijai/EatNoodle6people.git)
