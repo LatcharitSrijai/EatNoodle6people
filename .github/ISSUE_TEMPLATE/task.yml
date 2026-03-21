@@ -1,0 +1,45 @@
+name: Task
+description: Create a new project task
+title: "[TASK] "
+labels: ["task"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Task Summary
+      description: Briefly describe the task
+      placeholder: e.g. Add gallery modal
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain what should be done
+      placeholder: Describe the implementation steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define when this task is complete
+      placeholder: |
+        - Feature works correctly
+        - UI is responsive
+        - Code is pushed to repository
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
